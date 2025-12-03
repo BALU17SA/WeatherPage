@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fun_one = ( param1 = "balu" ) => {
+        //     document.write(param1, "<br>")
+        // }
+
+        // fun_one();  //balu
+        // fun_one("javascrip") //javascript
+        // fun_one(100,200) //100
+        // fun_one(undefined)   //balu
+        // fun_one(null)  //null
+
+
+
+
+                                                                
+        // let fun_one1 = ( param1, param2="Hello", param3="React", ...param4 ) => {
+        //             console.log(param1, param2, param3, param4)
+        // }
+
+        // fun_one1()  //undefined, hello, react, []
+        // fun_one1(undefined, undefined, undefined, undefined, undefined)
+        // fun_one1(null, null, null,null,null)
+
+
+
+
+
+        //callback functions
+
+        // let fun_one = ( param1, param2 ) => {
+        //         param1()
+        //         param2()
+        // }
+
+        // fun_one(
+        //     () => {
+        //         document.write("this is first param1 function")
+        //     },
+
+        //     () => {
+        //         document.write("This is second parm1 fucntion")
+        //     }
+        // )
+
+
+
+
+
+    //   let fun_one = ( param1 ) => {
+    //     let res1 = param1()
+    //     return res1
+    //   }
+
+    //   let res = fun_one(
+    //     () => {
+    //         return "hello world"
+    //     }
+    //   )
+
+    //   document.write(res)
+
+
+
+
+    // let param1 = () => {
+    //     return "hello world"
+    // }
+
+    // let res1 = param1()
+
+
+
+
+
+    // let addition = ( num, callback ) => {
+    //      callback(num)
+    // }
+
+    // addition( 5, (add) => {
+    //     document.write(add) 
+    // })
+
+
+
+
+    
+    // let addition = ( num, callback ) => {
+    //       callback(num+5)
+    // }
+
+    // let subtraction = ( num, callback ) => {
+    //       callback(num-3)
+    // }
+
+    // addition( 5, (addRes) => {
+    //     subtraction(addRes, (subRes) => {
+    //         console.log(subRes)
+    //     })
+    // })
+
+
+
+
+
+    // let fun_one = (para1) => para1*para1
+
+    // let res = fun_one(2)
+    // document.write(res)
+
+    // let callback = (add) => {
+    //     document.write(add) 
+    // }
+
+    // callback(5)
+
+
+    // let addition = ( num, callback ) => {
+    //         callback( num + 5 )
+    // }
+
+    // let subtraction = ( num, callback ) => {
+    //         callback( num - 3 )
+    // }
+
+
+    // addition( 5, ( addRes ) => {
+    //     subtraction( addRes, ( subRes ) => {
+    //             document.write(subRes)
+    //     } )
+    // } )
+
+    // constructor functions
+    // *********************
+
+    // constructor functions are used to create the objects
+    // collection of variables and functions called as class
+    // "new" keyword is used to create the object
+    // variables and functions should start with "this" keyword
+    // "this" keyword refers to the current object
+
+
+    // function class_one() {
+    //        this.sub1 = "React Js"
+    //        this.sub2 = "NodeJs"
+    // }
+
+    // let obj1 = new class_one()
+    // let x = obj1.sub1
+    // document.write(x)
+
+    // let y = obj1.sub2
+    // document.write(y)
+
+    // let obj2 = new class_one()
+    // let a = obj2.sub1
+    // document.write(a)
+
+    // let b = obj2.sub2
+    // document.write(b)
+
+    // function class_one() {
+    //     this.func1 = function(){
+    //         document.write("hello")
+    //     }
+    // }
+
+    // let obj1 = new class_one()
+    // obj1.func1()
+
+
+    // function class_one(){
+
+    // }
+
+    // class_one.prototype.x = 100
+
+    // class_one.prototype.fun1 = function() {
+    //     document.write("hello")
+    // }
+
+    // let obj1 = new class_one()
+    // let a = obj1.x
+    // document.write(a)
+
+    // obj1.fun1()
+
+    // function class_one(){}
+    // class_one.prototype.x = 100
+
+    // function class_two(){}  
+    // class_two.prototype =  Object.create(class_one.prototype)
+    // class_two.prototype.y = 200
+
+    // let obj1 = new class_two()
+    // let a = obj1.x
+    // document.write(a)
+    // let b = obj1.y
+    // document.write(b)
+
+    //IIFE
+    //stands for Immidate Invokable functional Expression
+    //IIFE introduced in ES9 version
+    //IIFE used to overcome the global pollution issue
+    //when ever we create function "automatically invoked" without calling called as IIFE
+
+        //  ( (num1, num2) => {
+        //     let addition = num1 + num2
+        //     document.write(addition)
+        //  } )(20, 10)
+
+    // let res = ( () => {
+    //             return "Hello"
+    //             } )()
+
+    // document.write(res)
+
+    // let res = ( ( num1 ) => {
+    //         return num1*num1
+    //     } )( 100 )
+
+    // document.write(res)
+
+    //generator functions
+    //*******************
+    //generator functions are used to control the "flow of execution"
+    //generator functions prefix with "*"
+    //generator functions return "iterator mechanism"
+    //each statement starts with "yield" keyword 
+
+    // function *fun_one(){
+    //        yield 100
+    //        yield 200
+    //        yield 300
+    //        yield 400
+    //        yield 500
+    // }
+
+    // let iterator = fun_one()
+    // console.log( iterator.next() )
+    // console.log( iterator.next() )
+    // console.log( iterator.next() )
+
+    // function *fun_one(){
+    //        yield "React"
+    //        yield fun_two()
+    //        yield "Html"
+    // }
+
+    // function *fun_two(){
+    //     yield 200
+    // }
+
+    // let cursor = fun_one()
+    // for( let i=0; i<3; i++ ){
+    //     console.log(cursor.next())
+    // }
+
+    //let fun_one = ( para1 ) => {
+    //    let res = para1()
+
+    //    return () => {
+    //        document.write(res)
+    //    }
+    //}
+
+    //let res2 = fun_one( ()=>{ return 100 } )
+    //res2()
+
+
+
+
+
+    // let para1 = ()=>{ return 100 }
+    //  para1() 
+
+    console.log("3" + 3 == 6)
+    console.log(+"3" + 3 == 6)
+
+    </script>
+</body>
+</html>

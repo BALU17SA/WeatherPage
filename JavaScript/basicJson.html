@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let obj1 = {
+             "key1" : "Hello",
+             "key2" : "JSON"
+
+         }
+
+        // let x = obj1.key1
+        // document.write(x,"<br>")
+        // let y = obj1.key2
+        // document.write(y, "<br>")
+        // console.log(x);
+        // console.log(y); 
+
+        // let a = obj1["key1"]
+        // document.write(a)
+        // let b = obj1["key2"]
+        // document.write(b)
+
+        //ES6
+        //DESTRUCTURING
+        // let { key1, key2 } = obj1
+        // document.write(key1)
+        // document.write(key2)
+
+        //for...in loop
+        //for...in loop used to iterate the objects
+
+        // for( let c in obj1 ){
+        //     console.log(obj1[c]);
+        // }
+
+        // let obj2 = {
+        //     "sub_one" : "Frontend",
+        //     "sub_two" : "Backend",
+        //     "sub_three" : "DataBase"
+        // }
+
+
+        // let outer = {
+        //     "inner" : { 
+        //         "key1" : "React",
+        //         "key2" : "JS"
+        //      }
+        // }
+
+        // var { inner } = outer
+        // console.log(inner);
+        // var { key1, key2 } = inner
+        // console.log(key1);
+        // console.log(key2)
+
+        let arr1 = [ { "eid" : 111, "ename" : "eone", "esal" : 10000, "eimage" : "https://sree050899.s3.us-east-2.amazonaws.com/it1.jpg" }, 
+                     { "eid" : 222, "ename" : "etwo", "esal" : 20000, "eimage" : "https://sree050899.s3.us-east-2.amazonaws.com/it2.jpg" }, 
+                     { "eid" : 333, "ename" : "ethree", "esal" : 30000, "eimage" : "https://sree050899.s3.us-east-2.amazonaws.com/it3.jpg" }, 
+                     { "eid" : 444, "ename" : "efour", "esal" : 40000, "eimage" : "https://sree050899.s3.us-east-2.amazonaws.com/it4.jpg" }, 
+                     { "eid" : 555, "ename" : "efive", "esal" : 50000, "eimage" : "https://sree050899.s3.us-east-2.amazonaws.com/it5.jpg" } ]
+
+                     document.write(` <table border="1"
+                                              align="center"
+                                              cellspacing="10px"
+                                              cellpadding="10px">
+                                              <tr>
+                                                 <th>eid</th>
+                                                 <th>ename</th>
+                                                 <th>esal</th>
+                                                 <th>eimage</th>
+                                              </tr> `);
+                    arr1.forEach( ( element, index ) => {
+                         var { eid, ename, esal, eimage } = element
+                         document.write(`<tr>
+                            <td>${eid}</td>
+                            <td>${ename}</td>   
+                            <td>${esal}</td>
+                            <td>
+                                <img src=${eimage} width="50px">
+                                </td>
+                            </tr>`)
+                    })
+
+                    document.write(`<table/>`)
+
+        
+
+
+
+
+       
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

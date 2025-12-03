@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <input type="text" id="nameInput" placeholder="Enter your name"> 
+     
+     <button onclick="clearData()">clear</button>
+
+    <script>
+        //  localStorage.setItem( "username", "balu" )
+        //  localStorage.setItem("houseno", "1234")
+
+        //  sessionStorage.setItem( "username", "jagadeesh" )
+
+         const clearData = ( ) => { 
+            localStorage.clear()
+         }
+
+    //     let user = localStorage.getItem("username","<br>")
+    //     document.write(user)
+
+    //     let user1 = sessionStorage.getItem("username")
+    //     document.write(user1)
+
+    //    localStorage.clear() 
+
+     document.getElementById("nameInput").addEventListener('input', function(){
+           sessionStorage.setItem("tempName", this.value)
+     })
+
+     window.addEventListener("load", function(){
+         document.getElementById("nameInput").value = sessionStorage.getItem("tempName") || "";
+     })
+
+     let user = {
+        name : "sree",
+        age : 25
+     }
+
+     localStorage.setItem("userInfo", JSON.stringify(user))
+
+     let data = JSON.parse(localStorage.getItem("userInfo"))
+     console.log(data)
+
+    
+    </script>
+</body>
+</html>

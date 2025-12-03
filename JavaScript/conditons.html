@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // if(1<2<3){
+        //     document.write("I am learning Js","<br>")
+        //     document.write("I am learning codition","<br>")
+        // }
+
+    //     if(undefined){
+    //         document.write("I am learning Js","<br>")
+    //     }
+    //     else{
+           
+    //         document.write("Above condition are wrong","<br>")
+    //     }
+
+
+        
+    // let x = 100;
+    // if(x<50){
+    //     document.write("less than 50","<br>")
+    // }
+    // else if(x>150){
+    //     document.write("greater than 150","<br>")
+    // }
+    // else if(x>100){
+    //     document.write("greater than 100", "<br>")
+    // }
+    // else if(x==100){
+    //     document.write("equal to 100")
+    // }
+    // else{
+    //     document.write("No matches")
+    // }
+
+    //check if a number is positive or negative
+    // let number = -5;
+
+    // if(number > 0)
+    //     console.log("Positive Number")
+    // else
+    //     console.log("Negative Number");
+
+    //check if a number is even or odd
+    // let number = 7
+
+    // if(number % 2== 1){
+    //     console.log("Odd")
+    // }
+    // else{
+    //     console.log("Even");
+    // }
+
+    //check if a person is eligible to vote age = 16 age == 18
+    //check if a number is a multiple of 3 and 5
+    // let number = 15
+
+    // if( number % 3 === 0 && number % 5 === 0 ){
+    //     console.log("Multiple of both 3 and 5");
+    // }
+    // else if ( number % 3 === 0 ){
+    //     console.log("Only Multiple of 3");
+    // }
+    // else if ( number % 5 === 0 ){
+    //     console.log("Only Multiple of 5");
+    // }
+    // else{
+    //     console.log("Not a multiple of 3 and 5");
+    // }
+
+    // let year = 2025
+    // if( (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) ){
+    //     console.log("Leap Year");
+    // }
+    // else
+    //  console.log("Not a Leap Year");
+    
+   
+    // let x = new Date()
+    // document.write(x,"<br>")
+
+    // document.write( new Date().getFullYear(), "<br>" )
+    // document.write( new Date().getMonth(), "<br>" )   
+    // document.write( new Date().toLocaleTimeString(), "<br>" )
+    
+
+    // let month = "";
+    // switch( new Date().getMonth() ) {           //6   //5
+
+    //     case 0:
+    //         month = "jan"
+    //         break;
+    //     case 1:
+    //         month = "Feb"
+    //         break;
+    //     case 3:
+    //         month = "Mar"
+    //         break;
+    //     case 6:
+    //         month = "july"
+    //         break;
+    //     default:
+    //         month = "No Matches"
+    //         break;
+    // }  
+    // document.write(month)      
+    
+    
+    // let day = 1;
+    // let dayName = ""
+    // switch(day) {
+    //     case 1: document.write("Monday"); break;
+    //     case 2: document.write("Tuesday"); break;
+    //     case 3: document.write("Wednesday"); break;
+    //     case 4: document.write("Thurdsay"); break;
+    //     case 5: document.write("Friday"); break;
+    //     case 6: document.write("Saturday"); break;
+    //     case 7: document.write("Sunday"); break;
+    //     default : document.write("Invalid day number");
+
+    // }
+
+    // let char = 'U'
+
+    // switch( char.toLowerCase() ) {
+    //     case "a" : 
+    //     case 'e' :
+    //     case 'i' :
+    //     case 'o' :
+    //     case 'u' :
+    //         document.write("Vowel");
+    //         break;
+    //     default :
+    //         document.write("Consonant")
+        
+    // }
+
+    //Using Switch Basic Calculator
+
+    // let a = 8, b = 2, op = "/" 
+
+    // switch(op) {
+    //     case '+' : document.write(a + b); break;   
+    //     case '-' : document.write(a - b); break;
+    //     case "*" : document.write(a * b); break;
+    //     case "/" : document.write(a / b); break;
+    // }
+
+//    let num = 14
+
+//    switch( num % 2 ){
+//     case 0 : console.log("Even") ; break;
+//     case 1 : console.log("Odd"); break; 
+//    }
+
+// 12,1,2 = winter
+// 3,4,5 = summer
+// 6,7,8 = rainy
+// 9,10,11 = spring
+//   3909 = invalid number
+
+
+// let marks = 78;  
+
+// switch(true) {
+//   case marks >= 90 : document.write("A"); break;
+//   case marks >= 80 : document.write("B"); break;
+//   case marks >= 70 : document.write("C"); break;
+//   default: document.write("F")
+// }
+
+let hour = new Date().getHours()
+
+switch(true){
+    case (hour >= 5 && hour < 12) : 
+        document.write("Good Morning"); 
+        break;
+    case (hour >= 12 && hour < 17) : 
+        document.write("Good Afternoon"); 
+        break;
+    case (hour >= 17 && hour < 21) : 
+        document.write("Good Evening"); 
+        break;
+    default :
+        document.write("Good Night")
+}
+
+    </script>
+</body>
+</html>

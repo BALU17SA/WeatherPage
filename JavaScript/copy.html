@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            "key1" : "Hello"
+        }
+
+        let xerox = { ...obj1 }
+
+        obj1.key2 = "Welcome"
+        xerox.key2 = "JSON"
+
+        console.log(obj1)
+        console.log(xerox)
+
+
+     let obj3 = {
+        "key" : "Hello"
+     }
+
+     let obj4 = obj3
+
+     obj3.key3 = "abcd"
+     console.log(obj3)
+     console.log(obj4)
+
+     let a = 10
+     let b = a
+     console.log(a)
+     console.log(b)
+     a = 20
+     console.log(a)
+     console.log(b)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //generator functions
+    //*******************
+
+    //generator functions are used to control the "flow of execution"
+    //generator functions prefix with "*"
+    //generator functions return "iterator mechanism"
+    //each statement starts with "yield" keyword 
+
+     function *fun_one(){
+            yield 100
+            yield 200
+            yield 300   
+     }
+
+     let iterator = fun_one()
+     console.log( iterator.next() )
+     console.log( iterator.next() )
+     console.log( iterator.next() )
+     console.log( iterator.next() )
+     
+    </script>
+</body>
+</html>

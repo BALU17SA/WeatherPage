@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="uname" placeholder="enter user name">
+    <br><br>
+    <input type="password" id="upwd" placeholder="enter password">
+    <br><br>
+    <button onclick="login()">login</button>
+    <p id="res"></p>
+    <script>
+        function login(){
+            let x = document.getElementById("uname").value
+            let y = document.getElementById("upwd").value
+            if( x === "abc" && y == "abc" )
+                document.getElementById("res").innerHTML = "Login Success !!!"
+            else
+                document.getElementById("res").innerHTML = "Login fail !!!"
+        }
+    </script> -->
+
+
+    <!--  <fieldset>
+        <legend>Calculator</legend>
+        <input type="number" id="num1" placeholder="enter number">  
+        <br><br>
+        <input type="number" id="num2" placeholder="enter number">   
+        <br><br>
+        <input type="number" id="num3" placeholder="result">
+        <br><br>
+
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">sub</button>
+
+        <script>
+            function add(){
+                let x = parseInt( document.getElementById("num1").value )
+                let y = parseInt( document.getElementById("num2").value )
+                let z = x + y
+                document.getElementById("num3").value = z
+            }
+            function sub(){
+                let x = parseInt( document.getElementById("num1").value )
+                let y = parseInt( document.getElementById("num2").value )
+                let z = x - y
+                document.getElementById("num3").value = z
+            }
+        </script>
+    </fieldset> -->
+
+<!-- 
+    <button onclick="alert('bttonclicke')">click me</button>
+    <button ondblclick="alert('Double clicked')">double click</button>
+
+    <button onclick="handleClick()">click 2</button>
+
+    <button ondblclick="handledoubleClick()">click 2</button>
+
+    <script>
+        function handleClick() {
+            alert("onclick by handleclick")
+        }
+
+        function handledoubleClick(){
+            alert("ondouble click handle")
+        }
+    </script> -->
+
+    <!-- <p onmouseover="this.style.color='red'">Hover over me</p>
+    <p onmouseout="this.style.color='blue'">Move mouse away form me</p>
+
+    <p onmouseover="changeColor()">Hover me 2</p>
+    <p onmouseout="handleMouseout()">Move your mouse 2</p>
+
+    <script>
+        function changeColor(){
+            console.log("Mouse is over the text")
+        }
+
+        function handleMouseout(){
+            console.log("Mouse moved out of the element")
+        }
+    </script> -->
+
+    <!-- <button
+    onmousedown="this.style.background='green'"
+    onmouseup="this.style.background='red'">
+        Hold & Release
+    </button>
+
+    <button onmousedown="mouseDownabc()" onmouseup="mouseUpabc()" >
+        Hold me and Release
+    </button>
+
+    <script>
+        function mouseDownabc(){
+            console.log("Mouse button is down")
+        }
+
+        function mouseUpabc(){
+            console.log("Mouse button is up")
+        }
+
+    </script> -->
+
+    <!-- <input type="text" onkeydown="console.log('key down')">
+    <input type="text" onkeyup="console.log('key up')">
+
+    <input type="text" onkeypress="console.log('key pressed')"> -->
+
+    <!--  <form onsubmit="alert('Form submitted')">
+        <input type="text" placeholder="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <form onreset="alert('Form reseted')">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="name">
+        <button type="reset">Reset</button>
+    </form>
+
+    <input type="text" onfocus="this.style.backgroundColor='lightyellow'" placeholder="focus me">
+    <input type="text" onblur="this.style.backgroundColor='blue'" placeholder="click away to button"> -->
+
+
+
+
+
+    <!-- <select onchange="alert('you select:' + this.value)">
+        <option value="">choose</option>
+        <option value="India">India</option>
+        <option value="usa">USA</option>
+    </select>
+
+    <input type="text" oninput="console.log('typing' + this.value)" placeholder="type something"> -->
+
+
+
+    
+
+    <!-- <button id="mybtn">Click Me</button>
+
+    <script>
+        document.getElementById("mybtn").addEventListener("click", function(){
+            alert("Button Clicked with Event Listener!")
+        })
+    </script> -->
+
+
+
+    
+
+    <!-- <p id="hovertext" style="width: 100px; height: 100px; background-color: lightgray;"></p>
+
+    <script>
+        document.getElementById("hovertext").addEventListener("dblclick", function(){
+            this.style.backgroundColor = "blue"
+        })
+    </script> 
+
+    <input type="text" id="keyboardinput" placeholder="type something">
+
+    <script>
+        document.getElementById('keyboardinput').addEventListener("keydown",function(){
+            console.log("you pressed:" )
+        })
+    </script> -->
+
+
+
+
+
+
+    <!-- <button id="clickbtn">click me</button>
+    <button id="removebtn">Remove click me</button>
+
+    <script>
+
+        function handleClick(){
+            alert("button clicked")
+        }
+
+        const btn = document.getElementById("clickbtn")
+        const remover = document.getElementById("removebtn")
+
+        btn.addEventListener("click", handleClick)
+
+        remover.addEventListener("click", function(){
+            btn.removeEventListener('click', handleClick)
+            alert('click event removed!')
+        })
+
+        window.addEventListener("resize", function(){
+            console.log("window resized widht:", window.innerWidth)
+        })
+
+        window.addEventListener("load", function(){
+            console.log("page loaded fully")
+        })
+
+
+    </script>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

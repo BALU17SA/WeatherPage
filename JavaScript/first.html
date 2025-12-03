@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("This is document.write","<br>")
+        console.log("This is console");
+
+        document.write(10 + "10", "<br>")    //1010  (concatination) 
+        document.write(10 +  +"10","<br>")          //20
+        document.write(10 +  -"10","<br>")          //0
+        document.write(10 * "10","<br>")            //100
+        document.write(10 /  "10","<br>")           //1
+        document.write(10 /  "A","<br>")            //NaN  (Not an Number)
+
+        // =    assignment
+        // ==   (comparision)
+        // ===  (strict comparision)
+        document.write( 10 == "10","<br>")    //true 
+        document.write(10 === "10","<br>")    //false
+
+        //true ---- 1
+        //false---- 0
+
+       document.write(true + true,"<br>")    //2
+       document.write(true + true + false + 1,"<br>")     //3
+       document.write(true / true,"<br>")              //1
+       document.write(true/false,"<br>")            //Infinity
+       document.write(100/false,"<br>")             //Infinity
+       document.write(1 + "true","<br>")              //1true  
+       document.write(1 + "true" + "false","<br>")    //1truefalse
+       document.write(1 + 2+ 3+ 1000+ "true" + false,"<br>")   //1006truefalse
+
+       document.write(0.1 + 0.2 == 0.3,"<br>")    //false      
+       document.write(0.1+0.2 == 0.30000000000000004, "<br>") //true  
+       document.write(0.1+0.2 == "0.30000000000000004","<br>") //true
+
+       document.write(10+5/10-5,"<br>")        //5.5
+       document.write((10+5)/(10-5),"<br>")           //3
+
+       //BODMAS
+       //Bracket   of    division   multiplication   addition    subraction
+
+       
+       document.write(3>2>1, "<br>")   //false
+       document.write(1<2<3,"<br>")    //true
+
+       //ternary Operator(? :)
+
+       true ? document.write("Java","<br>") : document.write("dot net","<br>")   //java
+       false ? document.write("java","<br") : document.write("dot net","<br>")   //dot net
+
+       3>2>1 ? document.write("java","<br>") : document.write("dot net","<br>")       
+       1<2<3 ? document.write("java","<br>") : document.write("dot net","<br>")    
+
+        //typeOf operator used to know the datatype
+        document.write( typeof "Balu", "<br>")     //string
+        document.write( typeof 100, "<br>")        //number
+        document.write( typeof "100", "<br>")      //string
+        document.write( typeof true, "<br>")       //boolean
+        document.write( typeof undefined, "<br>")  //undefined
+        document.write( typeof null, "<br>")       //object
+        document.write( typeof [], "<br>")         //object
+        document.write( typeof {}, "<br>")         //object
+        document.write( typeof function(){}, "<br>")  //function
+
+        document.write( undefined == null, "<br>" )  //true
+        document.write( undefined === null, "<br>" )  //false
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="myBtn">Click Me</button>
+
+    <script>
+        console.log(this)   //window
+
+
+
+
+
+        const person = {
+            name: "John",
+            getName() {
+                console.log(this.name);
+            }
+        };
+
+        person.getName();   // john
+
+
+
+
+
+        function test() {
+          console.log(this);
+        }
+
+        test();
+
+
+
+
+
+        const button = document.getElementById("myBtn");
+
+        button.onclick = function() {
+           console.log(this);  // <button id="myBtn">Click Me</button>
+        };
+
+
+
+
+
+        class Student {
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        let s1 = new Student("Ram");
+        console.log(s1.name);  // "Ram"
+
+
+
+
+
+        const obj = {
+            name: "Sam",
+            show: () => {
+                console.log(this.name);
+            }
+        };
+
+        obj.show(); // "" or undefined
+
+    </script>
+</body>
+</html>
