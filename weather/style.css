@@ -10,7 +10,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 0.8s ease;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 }
@@ -22,62 +26,21 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit;
-    filter: blur(100px);
     z-index: -1;
-}
-
-/* Dynamic Backgrounds */
-body.hot {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
-}
-
-body.warm {
-    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
-}
-
-body.moderate {
-    background: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%);
-}
-
-body.cold {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-body.freezing {
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
 }
 
 .container {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 25px;
     padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 100vh;
     backdrop-filter: blur(10px);
     animation: slideIn 0.6s ease;
 }
 
-.container::-webkit-scrollbar {
-    width: 8px;
-}
 
-.container::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-}
 
 @keyframes slideIn {
     from {
@@ -314,18 +277,22 @@ button:active {
 }
 
 #historyList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
 .history-item {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 12px 20px;
-    border-radius: 15px;
+    padding: 8px 12px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     animation: fadeInUp 0.5s ease backwards;
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 .history-item:nth-child(1) { animation-delay: 0.1s; }
@@ -346,7 +313,7 @@ button:active {
 }
 
 .history-item:hover {
-    transform: translateX(10px);
+    transform: translateY(-3px);
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
@@ -357,4 +324,5 @@ button:active {
     color: #999;
     padding: 20px;
     font-style: italic;
+    grid-column: 1 / -1;
 }
