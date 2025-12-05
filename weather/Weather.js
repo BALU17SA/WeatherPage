@@ -32,22 +32,22 @@ const toggleDeleteButton = () => {
 };
 
 // ---------- UPDATE BACKGROUND ----------
-const updateBackground = (temperature) => {
-    const body = document.body;
-    body.classList.remove('hot', 'warm', 'moderate', 'cold', 'freezing');
+// const updateBackground = (temperature) => {
+//     const body = document.body;
+//     body.classList.remove('hot', 'warm', 'moderate', 'cold', 'freezing');
     
-    if (temperature >= 35) {
-        body.classList.add('hot');
-    } else if (temperature >= 25) {
-        body.classList.add('warm');
-    } else if (temperature >= 15) {
-        body.classList.add('moderate');
-    } else if (temperature >= 5) {
-        body.classList.add('cold');
-    } else {
-        body.classList.add('freezing');
-    }
-};
+//     if (temperature >= 35) {
+//         body.classList.add('hot');
+//     } else if (temperature >= 25) {
+//         body.classList.add('warm');
+//     } else if (temperature >= 15) {
+//         body.classList.add('moderate');
+//     } else if (temperature >= 5) {
+//         body.classList.add('cold');
+//     } else {
+//         body.classList.add('freezing');
+//     }
+// };
 
 // ---------- GET CITY COORDINATES ----------
 const getCityCoordinates = async (city) => {
@@ -106,9 +106,10 @@ const getWeather = async () => {
         
         // Get weather data
         const weatherData = await getWeatherData(latitude, longitude);
+        console.log(weatherData)
         
         const weather = weatherData.current_weather;
-        const humidity = weatherData.hourly.relative_humidity_2m[0] || 70;
+        const humidity = weatherData.hourly.relative_humidity_2m[0] 
 
         showLoading(false);
 
@@ -123,7 +124,7 @@ const getWeather = async () => {
 
         displayWeather(data);
         addToHistory(name);
-        updateBackground(weather.temperature);
+        //updateBackground(weather.temperature);
 
     } catch (error) {
         showLoading(false);

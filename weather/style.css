@@ -40,8 +40,6 @@ body::before {
     animation: slideIn 0.6s ease;
 }
 
-
-
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -213,7 +211,7 @@ button:active {
         transform: scale(1);
     }
 }
-
+ 
 .weather-item {
     padding: 10px 0;
     font-size: 18px;
@@ -325,4 +323,142 @@ button:active {
     padding: 20px;
     font-style: italic;
     grid-column: 1 / -1;
+}
+
+/* ========== RESPONSIVE STYLES FOR 768px AND BELOW ========== */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 25px 20px;
+        width: 95%;
+        border-radius: 20px;
+        max-height: none;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #city {
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .input-error {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    #weatherInfo {
+        padding: 20px 15px;
+        margin: 15px 0;
+    }
+
+    .weather-item {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    #errorMessage {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #loading {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+
+    .history-section {
+        margin-top: 25px;
+        padding-top: 15px;
+    }
+
+    .history-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .history-section h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #deleteHistoryBtn {
+        width: 100%;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    #historyList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .history-item {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* ========== EXTRA SMALL DEVICES (480px and below) ========== */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        width: 98%;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    #city {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #weatherInfo {
+        padding: 15px 12px;
+    }
+
+    .weather-item {
+        font-size: 15px;
+        padding: 7px 0;
+    }
+
+    #historyList {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .history-item {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
